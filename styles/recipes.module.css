@@ -1,0 +1,37 @@
+.title {
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.ingredients {
+  font-family: monospace;
+  margin-left: 2rem;
+}
+
+.directions {
+  counter-reset: directions-counter;
+  list-style: none;
+}
+
+.directions li {
+  counter-increment: directions-counter;
+  margin: 2rem;
+  position: relative;
+  padding-top: 0.25rem;
+}
+
+.directions li::before {
+  content: counter(directions-counter);
+  border-radius: 50%;
+  background-color: navy;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  top: 0;
+  left: -2.5rem;
+  line-height: 2rem;
+  position: absolute;
+  text-align: center;
+}
